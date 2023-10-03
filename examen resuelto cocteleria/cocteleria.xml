@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cocteleria SYSTEM "dtd-cocteleria.dtd">
+<cocteleria direccion="Calle hola123" nombre="coctelazo" telefono="957333333">
+    <cocteles>
+        <coctel codigo="bm" ingredientePrincipal="vodka">
+            <nombre>Bloody Mary</nombre>
+            <Alcohol/>
+            <precio coste="21" />
+            <existencias />
+        </coctel>
+        <coctel codigo="rc">
+            <nombre>Ron Cola de &extra;</nombre>
+            <precio coste="7" />
+            <agotado />
+        </coctel>
+    </cocteles>
+    <ofertas>
+        <oferta coste="15">
+            2x1
+            <coctelReferido codigoCoctel="bm" platoCombinado="bm rc" />
+        </oferta>
+    </ofertas>
+</cocteleria>

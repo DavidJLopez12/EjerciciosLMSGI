@@ -1,0 +1,22 @@
+<!ELEMENT cocteleria (cocteles, ofertas)>
+<!ELEMENT cocteles (coctel+)>
+<!ELEMENT ofertas (oferta)>
+<!ELEMENT coctel (nombre, Alcohol?, precio, (existencias | agotado)*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT Alcohol EMPTY>
+<!ELEMENT precio EMPTY>
+<!ELEMENT existencias EMPTY>
+<!ELEMENT agotado EMPTY>
+<!ELEMENT oferta (#PCDATA | coctelReferido)*>
+<!ELEMENT coctelReferido ANY>
+<!ATTLIST cocteleria direccion CDATA #IMPLIED 
+                      nombre CDATA #REQUIRED
+                      telefono CDATA #FIXED "957333333">
+<!ATTLIST coctel codigo ID #REQUIRED
+                ingredientePrincipal (vodka | cola ) "vodka">
+<!ATTLIST coctelReferido codigoCoctel IDREF #REQUIRED
+                        platoCombinado IDREFS #IMPLIED>
+<!ENTITY % atributoCoste "coste CDATA #IMPLIED"> 
+<!ATTLIST precio %atributoCoste;>
+<!ATTLIST oferta %atributoCoste;>
+<!ENTITY extra "limon">
